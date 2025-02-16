@@ -1,0 +1,161 @@
+/* CSS Reset */
+body, h1, h2, h3, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit color from the h1 */
+}
+
+/* --- 00s Pop Culture Color Palette --- */
+:root {
+    --royal-blue: #4169E1;         /* Royal blue background */
+    --bubblegum-pink: #FF69B4;       /* Bubblegum pink for accents */
+    --holographic-silver: #D3D3D3;     /* Holographic silver for borders and highlights */
+    --bright-lime: #BFFF00;          /* Bright lime for headers and buttons */
+    --deep-navy: #1A237E;            /* Deep navy for text and key elements */
+    --primary-font: "Arial", sans-serif;     /* Base font */
+    --header-font: "Impact", sans-serif;      /* Chunky font for headers */
+    --menu-font: "monospace", sans-serif;       /* Menu or Sidebar */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: transparent; /* Royal blue background */
+    color: var(--deep-navy);           /* Deep navy text */
+    height: 100vh;                      /* Cover the entire viewport height */
+    overflow-y: scroll;                  /* Enable vertical scrolling if needed */
+    font-family: var(--primary-font);
+    /* ... other body styles ... */
+}
+
+main {
+    font-family: sans-serif;
+    background-color: var(--royal-blue); /* Royal blue background */
+    color: var(--deep-navy);           /* Deep navy text */
+    min-height: 100vh;                      /* Cover the entire viewport height */
+    overflow-y: scroll;                  /* Enable vertical scrolling if needed */
+}
+
+header {
+    background-color: var(--bright-lime); /* Bright lime header */
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 5px solid var(--bubblegum-pink); /* Bubblegum pink border */
+}
+
+header h1 {
+    font-family: Impact, sans-serif;
+    font-size: 2.5em;
+    color: var(--bubblegum-pink);         /* Bubblegum pink header text */
+    text-shadow: -2px -2px 0 var(--deep-navy), 2px -2px 0 var(--deep-navy), -2px 2px 0 var(--deep-navy), 2px 2px 0 var(--deep-navy); /* Thick deep navy shadow */
+    font-family: var(--header-font);
+}
+
+#filter-container {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--bubblegum-pink); /* Bubblegum pink background */
+    border: 3px solid var(--holographic-silver);   /* Holographic silver border */
+    border-radius: 10px;
+}
+
+select, button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid var(--deep-navy);     /* Deep navy border */
+    background-color: var(--holographic-silver); /* Holographic silver background */
+    color: var(--deep-navy);             /* Deep navy text */
+}
+
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.instagram-post-container {
+    border: 5px solid var(--holographic-silver); /* Holographic silver border */
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white; /* Royal blue background */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.title-bar {
+    background-color: var(--bright-lime); /* Bright lime title bar */
+    color: var(--royal-blue);            /* Royal blue text */
+    font-family: monospace;
+    padding: 8px;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    text-align: center;
+    border-bottom: 2px solid var(--bubblegum-pink); /* Bubblegum pink border */
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 105, 225, 0.8); /* Slightly translucent royal blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 2em;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .post-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* New styles for index.html */
+main {
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    background-color: var(--royal-blue); /* Royal blue background */
+    color: var(--deep-navy);           /* Deep navy text */
+    min-height: 100vh;                      /* Cover the entire viewport height */
+    overflow-y: scroll;
+}
+
+#project-links {
+    margin-top: 30px;
+}
+
+#project-links button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--deep-navy);     /* Deep navy border */
+    background-color: var(--holographic-silver); /* Holographic silver background */
+    color: var(--deep-navy);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--deep-navy);
+    color: var(--holographic-silver);
+}
