@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zardalabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+           <a href="../index.html"><h1>ZARDALABS</h1></a>  <!-- Add link to home -->
+        </header>
+
+        <div id="filter-container">
+            <select id="user-id-select">
+                <option value="">Show All Users</option>
+            </select>
+
+            <select id="category-select">
+                <option value="">Show All Categories</option>
+            </select>
+
+            <button onclick="filterPosts()">Filter Posts</button>
+        </div>
+
+        <div class="post-container">
+            <!-- Posts will be dynamically added here -->
+        </div>
+        <div id="loading-overlay">Loading...</div>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
