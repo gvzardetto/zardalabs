@@ -1,0 +1,182 @@
+@import url("../style.css");
+
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);  /* Using primary font */
+    background-color: var(--royal-blue);
+    color: var(--deep-navy);
+    overflow-x: hidden;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--bubblegum-pink);
+    font-family: var(--header-font);
+}
+
+/* Container */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: var(--bubblegum-pink); /* Pink sidebar */
+    box-shadow: 2px 0 5px var(--deep-navy); /* Shadow dark navy */
+    padding: 20px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    font-family: var(--menu-font); /* using main to the font */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: var(--bright-lime);  /* bright Lime header */
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: monospace;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: var(--royal-blue); /* royal blue selected */
+    color: var(--holographic-silver);  /* silver text*/
+    font-weight: 500;
+    transform: translateX(2px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Carousel Styling */
+.carousel-container {
+    padding: 20px;
+}
+
+.carousel-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Styling */
+.carousel-item {
+    width: 220px;
+    margin: 15px;
+    background-color: var(--holographic-silver); /* holographic-silver*/
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Softer, diffused */
+    padding: 15px;
+    text-align: left;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out; /* Subtle, smooth */
+    cursor: pointer;  /* Hand pointer */
+}
+
+.carousel-item:hover {
+    transform: scale(1.02);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item img.loaded {
+    opacity: 1;
+}
+
+.carousel-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold; /* Bolding */
+    color: var(--deep-navy); /* Use primary text color */
+    font-family: monospace;
+}
+
+.album-artist-name {
+    font-size: 14px;
+    color: var(--deep-navy); /* Dark Gray (Subtle UI elements) */
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.album-release-date {
+    font-size: 12px; /* Subheader size */
+    color: var(--deep-navy);
+    margin-top: 5px;
+    font-family: monospace;
+}
+
+/* Submenu Styling */
+.submenu {
+    display: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    border-left: 1px solid #ddd;
+}
+
+.submenu li {
+    padding: 8px 15px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li:hover {
+    background-color: var(--bright-lime);
+    color:var(--deep-navy);
+}
+
+.toggle-submenu {
+    display: block;
+}
+
+/* Hidden Content Styling */
+.hidden-content {
+    display: none;
+}
+
+/* Styling for h1 elements within #home-content */
+#home-content h1, #artists-content h1, #albums-content h1, #singles-content h1, #style-content h1, #mood-content  h1 {
+    background-color: var(--bright-lime); /* Bright lime title bar */
+    color: var(--royal-blue);            /* Royal blue text */
+    font-family: monospace;
+    padding: 8px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    text-align: center;
+    border-bottom: 2px solid var(--bubblegum-pink); /* Bubblegum pink border */
+}

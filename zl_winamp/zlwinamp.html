@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Zardetto</title>
+    <link rel="stylesheet" href="zlwinamp.css">
+    <!-- Link to your CSS file -->
+</head>
+
+<body>
+<main>
+    <header>
+      <a href="../index.html"><h1>ZARDALABS</h1></a>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li data-category="home" class="active">Home</li>
+                <li data-category="artists">Artists</li>
+                <li data-category="albums">Albums</li>
+                 <li data-category="singles">Singles</li>
+                <li>
+                    <span class="toggle-submenu" data-submenu="styles">Styles ▾</span>
+                    <ul class="submenu" id="styles-submenu">
+                        <!-- Styles will be dynamically added here -->
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle-submenu" data-submenu="moods">Moods ▾</span>
+                    <ul class="submenu" id="moods-submenu">
+                        <!-- Moods will be dynamically added here -->
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <!-- Home content (all carousels) -->
+            <div id="home-content">
+                <h1>Featured Artists</h1>
+                <div id="artists-carousel" class="carousel-container"></div>
+
+                <h1>Featured Albums</h1>
+                <div id="albums-carousel" class="carousel-container"></div>
+            </div>
+
+            <!-- Artists content -->
+            <div id="artists-content" class="hidden-content">
+                <h1>Artists</h1>
+                <div id="artists-only-carousel" class="carousel-container"></div>
+            </div>
+
+            <!-- Albums content -->
+            <div id="albums-content" class="hidden-content">
+                <h1>Albums</h1>
+                <div id="albums-only-carousel" class="carousel-container"></div>
+            </div>
+
+            <!-- Single Content -->
+            <div id="singles-content" class="hidden-content">
+                 <h1>Singles</h1>
+                 <div id="singles-only-carousel" class="carousel-container">
+                 </div>
+             </div>
+
+            <!-- Style content -->
+            <div id="style-content" class="hidden-content">
+                <h1>Styles</h1>
+                <div id="style-only-carousel" class="carousel-container"></div>
+            </div>
+
+            <!-- Mood content -->
+            <div id="mood-content" class="hidden-content">
+                <h1>Mood</h1>
+                <div id="mood-only-carousel" class="carousel-container"></div>
+            </div>
+        </main>
+    </div>
+
+        <!-- I was getting a problem, but we might fix later    <script src="script.js"></script>-->
+    </main>
+        <script src="script.js"></script>
+
+</body>
+
+</html>
