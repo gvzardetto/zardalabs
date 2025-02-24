@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zardalabs - News Feed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="../index.html"><h1>ZARDALABS</h1></a>
+        </header>
+
+        <div id="filter-container">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="political">Political</option>
+                <option value="science">Science</option>
+                <option value="technology">Technology</option>
+                <option value="ai">AI</option>
+                <option value="sports">Sports</option>
+                <option value="economics">Economics</option>
+                <option value="crypto">Crypto</option>
+                <option value="others">Others</option>
+            </select>
+            <button onclick="filterNews()">Filter</button>
+        </div>
+
+        <section id="news-section">
+            <!-- News items will be dynamically added here -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
