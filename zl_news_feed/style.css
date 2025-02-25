@@ -1,10 +1,13 @@
+/* Import your style.css (assuming it contains your color variables) */
 @import url("../style.css");
 
 #news-section {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between columns and rows */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Columns */
+    gap: 20px;
+    max-width: 1200px; /* Limit width for readability */
+    margin: 0 auto; /* Center the section */
 }
 
 .news-item {
@@ -13,13 +16,13 @@
     border: 1px solid var(--deep-navy);
     border-radius: 5px;
     background-color: #FFFFE0; /* Lemon Chiffon color */
-    color: var(--deep-navy);  /* Dark text for readability */
-    font-family: monospace;  /*add this font to style*/
-    font-size: 1.2em;
+    color: var(--deep-navy);
+    font-family: sans-serif; /* Change to a more readable font */
+    font-size: 1rem; /* Use rem for consistent font sizing */
 }
 
 .news-item h3 {
-    font-size: 1.4em;
+    font-size: 1.2rem; /* Use rem for heading size as well */
     margin-bottom: 5px;
 }
 
@@ -37,17 +40,17 @@
 }
 
 .news-source {
-    font-size: 0.9em;
-    color:  var(--deep-navy); /* Bright lime for source info */
-    font-family: monospace;  /*add this font to style*/
+    font-size: 0.8rem; /* Use rem for source info */
+    color: var(--deep-navy);
+    font-family: monospace; /* Keep monospace for the source */
 }
 
-/* Responsive design for smaller screens (single column) */
-@media (max-width: 768px) {
+/* Responsive design for smaller screens (single column) - NOT NEEDED NOW */
+/*  @media (max-width: 768px) {
     #news-section {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr; /* Single column on smaller screens - NOT NEEDED NOW */
     }
-}
+} */
 
 #filter-container {
     text-align: center;
